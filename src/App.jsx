@@ -16,7 +16,7 @@ const App = () => {
   const [socketId, setSocketId] = useState("");
   const socket = useMemo(
     () =>
-      io("http://localhost:3000/", {
+      io("https://chatapp-3cd8.onrender.com/", {
         withCredentials: true,
       }),
     []
