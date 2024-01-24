@@ -14,13 +14,7 @@ const App = () => {
   const [room, setRoom] = useState("");
   const [roomName, setRoomName] = useState("");
   const [socketId, setSocketId] = useState("");
-  const socket = useMemo(
-    () =>
-      io("https://chatapp-3cd8.onrender.com/", {
-        withCredentials: true,
-      }),
-    []
-  );
+  const socket = useMemo(() => io("https://chatapp-3cd8.onrender.com/"), []);
   useEffect(() => {
     socket.on("connect", () => {
       console.log("connected", socket.id);
